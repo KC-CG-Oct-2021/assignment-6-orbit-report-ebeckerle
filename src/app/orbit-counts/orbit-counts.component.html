@@ -1,6 +1,46 @@
 <h3>Satellite Count:</h3>
 <div class="counts">
-	<div>Total: <span class="counts-total">NaN</span></div>
+	<div>
+		Total: <span class="counts-total">{{countTotal()}}</span>
+	</div>
+	<div>
+		Space Debris: <span class="counts-total">{{countByType("Space Debris")}}</span>
+	</div>
+	<div>
+		Communication: <span class="counts-total">{{countByType("Communication")}}</span>
+	</div>
+	<div>
+		Probe: <span class="counts-total">{{countByType("Probe")}}</span>
+	</div>
+	<div>
+		Positioning: <span class="counts-total">{{countByType("Positioning")}}</span>
+	</div>
+	<div>
+		Space Station: <span class="counts-total">{{countByType("Space Station")}}</span>
+	</div>
+	<div>
+		Telescope: <span class="counts-total">{{countByType("Telescope")}}</span>
+	</div>
 </div>
 
+<!-- <div>
+    <button (click)="trialFunction3(satellites)">click, trial to log things to console</button>
+</div> -->
 <!-- TODO 4: add logic to count number of satellites displayed -->
+
+<!-- what ive been working on for part 4 - not even sure if an if statement is what I want, also I am unsure if this argument
+is correct or I should have a little different one in it, it needs to be a string.... -->
+
+<!-- <h3>Satellite Count:</h3>
+<div class="counts">
+	<div>Total: <span class="counts-total" *ngIf = "satellites.countByType(satellites.type) > 0; else NaN">trial</span>
+	<ng-template #NaN>NaN</ng-template>
+	</ng-template></div>
+</div> -->
+
+<!-- <h3>Satellite Count:</h3>
+<div class="counts">
+	<div>Total: <span class="counts-total" *ngIf = "countByType('type') > 0; else NaN">trial</span>
+	<ng-template #NaN>NaN</ng-template>
+	</ng-template></div>
+</div> -->

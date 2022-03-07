@@ -51,5 +51,13 @@ export class AppComponent {
 		this.displayList = matchingSatellites;
 	}
 
+	// trialFunction2(logMe){
+	// 	console.log("fox");
+	// 	console.log(logMe);
+	// 	console.log(logMe.value);
+	// }
+
+
+
 
 }

@@ -27,5 +27,17 @@ export class OrbitCountsComponent implements OnInit {
 	return count;
  }
 
+ countTotal(){
+	 //add up the current totals for each type
+	 let total = this.countByType("Space Debris") + this.countByType("Communication") + this.countByType("Probe") + this.countByType("Positioning") + this.countByType("Space Station") + this.countByType("Telescope");
+	 return total;
+ }
+
+ trialFunction3(logMe){
+	console.log("fox");
+	console.log(typeof logMe);
+	console.log(logMe[1]);
+	// console.log(logMe.value);
+}
 
 }

@@ -27,9 +27,9 @@ export class OrbitListComponent implements OnInit {
 		});
 	}
 
-	trialFunction(logMe){
-		console.log("fox");
-		// console.log(logMe);
-		console.log(logMe.value);
-	}
+	// trialFunction(logMe){
+	// 	console.log("fox");
+	// 	// console.log(logMe);
+	// 	console.log(logMe.value);
+	// }
 }

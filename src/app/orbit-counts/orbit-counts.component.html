@@ -4,9 +4,9 @@
 		Total: <span class="counts-total">{{countTotal()}}</span>
 	</div>
 
-	<!-- <div *ngFor = "let satellite of satellites">
-		<div>{{satellite.type}}: <span class="counts-total">{{countByType(satellite.type)}}</span></div>
-	</div> -->
+	<div *ngFor = "let satellite of satellites; trackBy: satellites.type">
+		{{satellite.type}}: <span class="counts-total">{{countByType(satellite.type)}}</span>
+	</div>
 	
 	<!-- <div *ngFor = "let type of satellites.type">
 		{{type}}: <span class="counts-total">{{countByType(type)}}</span>
@@ -16,7 +16,7 @@
 		{{satellite.type}}: <span class="counts-total">{{countByType(satellite.type)}}</span>
 	</div> -->
 	
-	<div>
+	<!-- <div>
 		Space Debris: <span class="counts-total">{{countByType("Space Debris")}}</span>
 	</div>
 	<div>
@@ -37,7 +37,7 @@
 	<!-- //OUT OF CURIOUSITY TRY TO TRICK THE AUTO-GRADER -->
 	<div>
 		Imaging: <span class="counts-total">{{countByType("Imaging")}}</span>
-	</div>
+	</div> -->
 </div>
 
 <!-- <div>

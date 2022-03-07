@@ -36,6 +36,34 @@ export class OrbitCountsComponent implements OnInit {
 	 return total;
  }
 
+//  loopThruNoRepeats(){
+// 	let orbitCounts = {};
+// 	for (let i = 0; i < this.satellites.length; i++) {
+// 		if (!orbitCounts.includes(this.satellites[i].type)) {
+// 		   console.log('add type as key and amt as 1 into the orbitCounts object');
+// 		   let amtType += 1
+// 		   orbitCounts[this.satellites[i].type] = amtType;
+// 		} else if (orbitCounts.includes(this.satellites[i].type)) {
+// 			console.log("when type is already in as a key, add a 1 to the value");
+// 		}
+//    return orbitCounts;
+// 	}
+// }
+
+//  loopThruNoRepeats(){
+// 	 // think I need to actually create an object that is laid out like  - type: value(numberoftype)
+// 	 let typesOnlyOnce = [];
+// 	 for (let i = 0; i < this.satellites.length; i++) {
+// 		 if (!typesOnlyOnce.includes(this.satellites[i].type)) {
+// 			console.log('push type into the typesOnlyOnce Array');
+// 			typesOnlyOnce.push(this.satellites[i].type);
+// 		 }
+
+// 	return typesOnlyOnce;
+
+// 	 }
+//  }
+
 //  trialFunction3(logMe){
 // 	console.log("fox");
 // 	console.log(typeof logMe);

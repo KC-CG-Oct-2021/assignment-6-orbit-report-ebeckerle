@@ -10,7 +10,8 @@ export class OrbitCountsComponent implements OnInit {
 
 	@Input() satellites: Satellite[];
 
-  constructor() { }
+
+	constructor() { }
 
   ngOnInit() {
   }
@@ -31,15 +32,37 @@ export class OrbitCountsComponent implements OnInit {
 	 //add up the current totals for each type
 	//  let total = this.countByType("Space Debris") + this.countByType("Communication") + this.countByType("Probe") + this.countByType("Positioning") + this.countByType("Space Station") + this.countByType("Telescope");
 
-	// out of curiousity try to trick the auto-grader
-	 let total = this.countByType("Space Debris") + this.countByType("Communication") + this.countByType("Probe") + this.countByType("Positioning") + this.countByType("Space Station") + this.countByType("Telescope")+ this.countByType("Imaging");
-	 return total;
+	// // out of curiousity try to trick the auto-grader
+	//  let total = this.countByType("Space Debris") + this.countByType("Communication") + this.countByType("Probe") + this.countByType("Positioning") + this.countByType("Space Station") + this.countByType("Telescope")+ this.countByType("Imaging");
+	//  return total;
+	let total = 0
+	for (let i = 0; i < this.newArrayOfTypes().length; i++){
+		let type = this.newArrayOfTypes()[i];
+		total +=  this.countByType(type);
+	}
+	return total;
+	
  }
+
+ newArrayOfTypes(): string []{
+	let newArray = [];
+	for (let i = 0; i < this.satellites.length; i++) {
+		if (!newArray.includes(this.satellites[i].type)) {
+			newArray.push(this.satellites[i].type);
+		}
+	}
+	return newArray;
+
+ }
+
+
 
 //  loopThruNoRepeats(){
 // 	let orbitCounts = {};
+//		// want to try a for ... in loop to iterate thru the orbitCounts object
 // 	for (let i = 0; i < this.satellites.length; i++) {
-// 		if (!orbitCounts.includes(this.satellites[i].type)) {
+// 		//for (item)
+		//if (!orbitCounts.includes(this.satellites[i].type)) {
 // 		   console.log('add type as key and amt as 1 into the orbitCounts object');
 // 		   let amtType += 1
 // 		   orbitCounts[this.satellites[i].type] = amtType;

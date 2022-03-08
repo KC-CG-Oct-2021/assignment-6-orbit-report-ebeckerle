@@ -7,7 +7,7 @@ export class Satellite {
 	operational: boolean;
 
 	// could not figure out if I need to use a boolean variable in order to set the CSS warning class on for the Space Dbris
-	spaceDebris: boolean = true;
+	// spaceDebris: boolean = true;
 
 	constructor(name: string, type: string, launchDate: string, orbitType: string, operational: boolean) {
 		this.name = name;
